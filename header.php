@@ -1,78 +1,205 @@
-<!DOCTYPE html>
-<html lang="en"> 
-<head>
+<!-- First code for HTML -->
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-svg" />
     <meta name="description" content="Blog Site Template">
     <meta name="author" content="https://youtube.com/FollowAndrew">    
     <link rel="shortcut icon" href="images/logo.png"> 
 	<?php
 	 	wp_head();
 	?>
-</head> 
+    <title>Hospital Regional de Alta Especialidad de la Mujer</title>
+  </head>
+  <body>
 
-<body>
+    <div id="search_window" class="bg-yellow position-fixed z-index--4  vh-100 vw-100 d-flex d-flex justify-content-center align-items-center">
+      <a href="javascript:void(0)" class="text-white position-absolute close-search" id="close-search"><i class="bi bi-x-lg"></i></a>
+      <div class="position-relative">
+          <form action="#">
+            <div class="input-data">
+                <input class="btn-search text-white fw-bolder fs-4 px-3 py-2" id="search_button" type="text" placeholder="Escribir Aquí" name="search">
+                <button type="submit"><i class="bi bi-search text-white h4 fw-bolder "></i></button>
+            </div>
+          </form>
+      </div>
+  </div> 
+
+  
     
-    <header class="header text-center">	    
-	    <a class="site-title pt-lg-4 mb-0" href="index.html">SiteName.dev</a>
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			</button>
+    <a href="javascript:void(0)" id="chat_bot"><i class="bi bi-chat-left-dots fs-2 text-white"></i></a>
+  
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<img class="mb-3 mx-auto logo" src="images/logo.png" alt="logo" >	
-                
-                <?php 
-
-                    wp_nav_menu( 
-
-                        array(
-                            'menu' => 'primary',
-                            'container'=>'',
-                            'theme_location'=> 'primary',
-                            'items_wrap'=> '<ul id="" class="navbar-nav flex-column text-sm-center text-md-left">%3$s</ul>'
-                        )
-
-                    ); 
-                
-                ?>
-				
-				<ul class="navbar-nav flex-column text-sm-center text-md-left">
-					<li class="nav-item">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="post.html"><i class="fas fa-file-alt fa-fw mr-2"></i>Blog Post</a>
-					</li>
-					<li class="nav-item active">
-					    <a class="nav-link" href="page.html"><i class="fas fa-file-image fa-fw mr-2"></i>Blog Page</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="archive.html"><i class="fas fa-archive fa-fw mr-2"></i>Blog Archive</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link btn btn-primary" href="contact.html"><i class="fas fa-envelope fa-fw mr-2"></i>Contact Us</a>
-					</li>
-				</ul>
-				<hr>
-				<ul class="social-list list-inline py-3 mx-auto">
-					<li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
-					<li class="list-inline-item"><a href="#"><i class="fab fa-codepen fa-fw"></i></a></li>
-				</ul>
-
-			</div>
-		</nav>
+    <div
+      class="
+        hero-red-bd
+        position-absolute
+        top-0
+        end-0
+        z-index--1
+        d-none d-md-none d-sm-block d-lg-block d-xl-block
+      "
+    >
+      <a
+        href="tel:9933109000"
+        class="text-white position-absolute end-0 me-5 mt-4"
+      >
+        <i class="fa fa-phone" aria-hidden="true"></i> (993) 310 90 00</a
+      >
+      <img src="img/fondo_red.png" class="img-fluid" />
+    </div>
+    <!-- Header inicio -->
+    <header
+      class="
+        vh-20
+        d-flex
+        flex-row
+        justify-content-between
+        align-items-center
+        ps-4
+        p-2
+      "
+    >
+      <img
+        src="img/logo_hospital.png"
+        alt="Logotipo junto con secretaria"
+        class="img-fluid"
+      />
     </header>
+    <!-- Header Final -->
+
+    <div class="hero bg-hero text-center text-sm-start">
+      <!-- Fondo rojo blanco -->
+
+      <nav
+      class="
+        navbar navbar-expand-lg
+        py-3
+        sticky-top
+        bg-menu
+        z-index--3
+        box-shadow
+      "
+    >
+      <div class="container-sm">
+        <button
+          class="navbar-toggler text-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <i class="bi bi-list text-white"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="navmenu"
+        >
+          <ul class="navbar-nav text-white main-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-white main-link"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#questions"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Directorio Telefonico</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="directorio_activo.html"
+                    >Directorio Médico</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="directorio_area_extensiones.html"
+                    >Área y Extensiones</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#instructors"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="division_medica.html"
+                    >Divisiones Medicas</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="calidad_educacion.html"
+                    >Calidad, Educación E Investigación</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="calidad.html">Calidad</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="educacion_salud.html"
+                    >Educación En Salud</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#instructors"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Nosotros</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="mensaje_director.html"
+                    >Mensaje del Director</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="historia.html">Historia</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="vision_mision.html"
+                    >Misión, Visión y Valores
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link text-white main-link"
+                >Noticias <i class="bi bi-newspaper"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link text-white main-link"
+                >Covid-19 <i class="fas fa-virus"></i></a>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:void(0)" id="btn-search" class="search-btn"><i class="bi bi-search text-white h4"></i></a>
+      </div>
+    </nav>
+
     <div class="main-wrapper">
-	    <header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading"><?php the_title() ?></h1>
-		</header>
+
+
