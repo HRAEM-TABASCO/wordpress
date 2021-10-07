@@ -26,12 +26,7 @@
             </div>
           </form>
       </div>
-  </div> 
-
-  
-    
-    <a href="javascript:void(0)" id="chat_bot"><i class="bi bi-chat-left-dots fs-2 text-white"></i></a>
-  
+  </div>   
 
     <div
       class="
@@ -64,7 +59,7 @@
       "
     >
       <img
-        src="img/logo_hospital.png"
+        src="<?=get_template_directory_uri(). '/assets/image/logo_hospital.png'?>"
         alt="Logotipo junto con secretaria"
         class="img-fluid"
       />

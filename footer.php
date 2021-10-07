@@ -1,5 +1,5 @@
    <!-- FOOTER -->
-   <footer class="bg-hero z-index--4">
+   <footer class="bg-hero z-index--4 position-relative bottom-0">
       <div class="bg-menu">
         <div
           class="

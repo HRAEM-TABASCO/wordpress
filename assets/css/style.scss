@@ -1,0 +1,32 @@
+@import "./custom_text";
+@import "./custom_variable";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./custom_carousel";
+@import "./section_hero";
+.z-index--1 {
+    z-index: -1;
+}
+
+.scale-1 {
+    cursor: pointer;
+    transition:all 1s ease-out;
+    position: relative;
+    z-index: 2;
+   &:hover{
+      
+        transform: scale(1.1);
+   }
+   
+}
+
+  
+.input-group{
+    width: 15%;
+    height: 15%;
+}
+
+@media (min-width:768px) {
+    .search-input{
+        width: 50%;
+    }
+}
