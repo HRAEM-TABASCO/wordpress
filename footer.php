@@ -14,7 +14,7 @@
           "
         >
           <div class="correo d-flex">
-            <img src="./img/email_icon.svg" alt="Email" />
+            <img src="http://hmujertab.gob.mx/wp-content/uploads/2021/10/email_icon.svg" alt="Email" />
             <div class="ms-3">
               <h4 class="fs-5">CONTACTATE CON NOSOTROS</h4>
               <a href="#" class="text-white" class="link-light"
@@ -24,7 +24,7 @@
           </div>
 
           <div class="ubicacion d-flex">
-            <img src="./img/ubicacion_icon.svg" alt="Ubicación" />
+            <img src="http://hmujertab.gob.mx/wp-content/uploads/2021/10/ubicacion_icon.svg" alt="Ubicación" />
             <div class="ms-3">
               <h4 class="fs-5">UBICACIÓN</h4>
               <p>
@@ -36,7 +36,7 @@
           </div>
 
           <div class="enlaces d-flex">
-            <img src="./img/enlace_icon.svg" alt="Enlaces" />
+            <img src="http://hmujertab.gob.mx/wp-content/uploads/2021/10/enlace_icon.svg" alt="Enlaces" />
             <div>
               <h4 class="fs-5">ENLACES EXTERNOS</h4>
               <ul class="p-0 ms-3">

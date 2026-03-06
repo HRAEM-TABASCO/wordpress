@@ -1,8 +1,17 @@
 <?php
 
+
+function my_wp_nav_menu_objects($objects, $args) {
+    foreach($objects as $key => $item) {
+        $objects[$key]->classes[] = 'nav-link text-white main-link';
+    }
+    return $objects;
+}
+add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
 function followhmujertab_menus(){
     $locations = array(
-        'primary' => "Desktop Primary Left Sidebar",
+        'primary' => "Navigation bar",
         'footer' => "Footer Menu Items"
     );
     register_nav_menus( $locations);

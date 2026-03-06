@@ -38,12 +38,11 @@
         align-items-center
         ps-4
         p-2
-		hello-there
       "
     >
       <img
-        src="<?=get_template_directory_uri(). '/assets/image/Screenshot_29.png'?>"
-        alt="Logotipo junto con secretaria 2"
+        src="<?=get_template_directory_uri(). '/assets/image/logo_hospital.png'?>"
+        alt="Logotipo junto con secretaria"
         class="img-fluid"
       />
     </header>
