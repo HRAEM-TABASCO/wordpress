@@ -1,0 +1,32 @@
+/* Editing carousel */
+.carousel{
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+        display: inline-block;
+        border-radius:50%;
+        width: 3rem;
+        height: 3rem;
+        background:#A10C36;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: 70% 70%;
+    }
+    .carousel-control-prev-icon {
+        background-image: $carousel-control-prev-icon-bg;
+      }
+      
+    .carousel-control-next-icon {
+        background-image: $carousel-control-next-icon-bg;
+    }
+    .carousel-indicators [data-bs-target] {
+        width: 15px;
+        height:15px;
+        border-radius: 50%;
+        background-color: rgb(53, 47, 47);
+    }
+
+    .carousel-indicators .active {
+        background-color:rgb(255, 255, 255);
+      }
+}
