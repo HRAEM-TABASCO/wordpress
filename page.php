@@ -9,8 +9,6 @@
           <?php the_content(); ?>
         </div>
       </article>
-
-      <?php comments_template(); ?>
     <?php endwhile; ?>
   <?php endif; ?>
 </main>
