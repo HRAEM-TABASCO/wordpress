@@ -1,0 +1,489 @@
+<!-- First code for HTML -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.svg" type="image/x-svg" />
+    <!-- FontAwesome CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <!-- Styles for the hospital -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <title>Hospital Regional de Alta Especialidad de la Mujer</title>
+  </head>
+  <body>
+    <div
+      id="search_window"
+      class="
+        bg-menu
+        position-fixed
+        z-index--4
+        vh-100
+        vw-100
+        d-flex d-flex
+        justify-content-center
+        align-items-center
+      "
+    >
+      <a
+        href="javascript:void(0)"
+        class="text-white position-absolute close-search"
+        id="close-search"
+        ><i class="bi bi-x-lg"></i
+      ></a>
+      <div class="position-relative">
+        <form action="#">
+          <div class="input-data">
+            <input
+              class="btn-search text-white fw-bolder fs-4 px-3 py-2"
+              id="search_input"
+              type="text"
+              placeholder="Escribir Aquí"
+              name="search"
+            />
+            <button type="submit">
+              <i class="bi bi-search text-white h4 fw-bolder"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="w-100">
+      <div class="container-fluid bg-hero d-sm-flex py-2">
+        <div class="align-self-sm-center text-white">
+          Tel
+          <a href="tel:9933109000" class="text-white">
+            <i class="fa fa-phone" aria-hidden="true"></i> (993) 310 90 00</a
+          >
+        </div>
+        <p class="m-0 text-center text-white flex-grow-1">
+          TODOS LOS DERECHOS RESERVADOS AL HOSPITAL REGIONAL DE ALTA
+          ESPECIALIDAD DE LA MUJER &#169;
+        </p>
+      </div>
+    </div>
+    <header
+      class="
+        vh-20
+        d-flex
+        flex-row
+        justify-content-between
+        align-items-center
+        ps-4
+        p-2
+      "
+    >
+      <img
+        src="img/logo_hospital.png"
+        alt="Logotipo junto con secretaria"
+        class="img-fluid"
+      />
+    </header>
+    <nav
+      class="
+        navbar navbar-expand-lg
+        py-3
+        sticky-top
+        bg-menu
+        z-index--1
+        box-shadow
+      "
+    >
+      <d iv class="container-sm">
+        <button
+          class="navbar-toggler text-right"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <i class="bi bi-list text-white"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-start"
+          id="navmenu"
+        >
+          <ul class="navbar-nav text-white main-menu">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link text-white main-link"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#questions"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Directorio Telefonico</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="directorio_activo.html"
+                    >Directorio Médico</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="directorio_area_extensiones.html"
+                    >Área y Extensiones</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#instructors"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Servicios</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="division_medica.html"
+                    >Divisiones Medicas</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="calidad_educacion.html"
+                    >Calidad, Educación E Investigación</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="calidad.html">Calidad</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="educacion_salud.html"
+                    >Educación En Salud</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#instructors"
+                class="nav-link text-white dropdown-toggle main-link"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Nosotros</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="mensaje_director.html"
+                    >Mensaje del Director</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="historia.html">Historia</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="vision_mision.html"
+                    >Misión, Visión y Valores
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link text-white main-link"
+                >Noticias <i class="bi bi-newspaper"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#instructors" class="nav-link text-white main-link"
+                >Covid-19 <i class="fas fa-virus"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:void(0)" id="btn-search" class="search-btn"
+          ><i class="bi bi-search text-white h4"></i
+        ></a>
+      </d>
+    </nav>
+
+    <div class="position-relative w-100">
+      <div
+        class="
+          w-100
+          h-100
+          py-5
+          position-absolute
+          d-flex
+          align-items-center
+          justify-content-center
+          text-white
+          bg-secundary
+        "
+      >
+        <h3 class="text-costum shadow-1 text-center">
+          NOTICIAS <i class="bi bi-newspaper"></i>
+        </h3>
+      </div>
+      <img src="img/fondo_hospita.jpg" alt="Medicos" class="w-100 h-100" />
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="py-4">
+          <div class="d-flex justify-content-center align-items-center">
+            <img
+              src="img/contenido/FB_IMG_1625246959610[3729]-2 1.png"
+              class="img-fluid"
+            />
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <p class="px-1">
+              <i class="bi bi-calendar-event fs-3 text-menu"></i> 28 Julio, 2021
+            </p>
+            <p class="px-1">
+              <i class="bi bi-person fs-3 text-menu"></i> miturriagal
+            </p>
+          </div>
+        </div>
+
+        <div class="py-4 text-justify">
+          <div class="row">
+            <div class="col text-center"><h2>TITULO DE LA NOTICIA</h2></div>
+          </div>
+          <div class="row">
+            <div class="col text-center"><h4>Subtitulo de la nota</h4></div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Adipisci dolor architecto veniam expedita quos. Nobis expedita
+                quis possimus doloremque quisquam dolorem, reprehenderit non
+                voluptatibus illo cupiditate! Aut eaque harum culpa. Dolores
+                eius iusto molestias, voluptates eligendi quasi, ullam incidunt
+                aspernatur aliquam, porro deserunt! Quam quaerat fugit,
+                expedita, laborum culpa incidunt voluptatum illum accusamus
+                repudiandae aliquid vel! Deleniti, optio consectetur! Iusto. Nam
+                nesciunt porro nisi ipsam reiciendis dolorum et, dolore quaerat
+                at laborum nostrum architecto, alias ullam! Eum, ullam
+                laboriosam omnis repellat culpa quo consequuntur, hic, fugiat
+                nobis provident ea quibusdam. Dolores, ea perspiciatis! Quos
+                pariatur voluptatem architecto officia aliquid laborum odit cum
+                obcaecati, minima beatae id repudiandae optio eveniet rem
+                perferendis quae adipisci quod aliquam. Deserunt consequuntur
+                provident dolore excepturi!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+                quas inventore a, quod, ut magni corrupti hic aperiam quo
+                repellat laudantium numquam dicta labore amet, deserunt officiis
+                enim placeat laborum. Quae deleniti rem adipisci, sint quos quam
+                sit facere aut quaerat blanditiis, ratione sed iure doloremque
+                et quo tempora numquam dolor velit voluptatem necessitatibus.
+                Deserunt similique odio pariatur rem sapiente. Esse tempora
+                culpa vero distinctio libero repellat quia voluptates eaque
+                explicabo nihil, ex expedita ratione fuga mollitia autem,
+                possimus eveniet fugit. Dolorum libero nam quas cum ipsum odit
+                dicta autem! Dolores, fugiat. Unde explicabo vitae quo voluptas
+                quasi eos mollitia nesciunt suscipit, delectus tenetur voluptate
+                numquam placeat odit ipsa dolorum totam doloribus nihil quae sed
+                officiis similique fugit omnis iure!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-hero z-index--3 text-white position-relative bottom-0">
+      <div class="bg-menu py-4">
+        <div
+          class="
+            contactos
+            d-lg-flex
+            position-relative
+            text-whited
+            py-1
+            px-5
+            align-items-center
+            justify-content-evenly
+          "
+        >
+          <div class="correo d-flex">
+            <img src="./img/email_icon.svg" alt="Email" />
+            <div class="ms-3">
+              <h4 class="fs-5">CONTACTATE CON NOSOTROS</h4>
+              <a href="#" class="text-white" class="link-light"
+                >Correo Institucional</a
+              >
+            </div>
+          </div>
+
+          <div class="ubicacion d-flex">
+            <img src="./img/ubicacion_icon.svg" alt="Ubicación" />
+            <div class="ms-3">
+              <h4 class="fs-5">UBICACIÓN</h4>
+              <p>
+                Av. Gregorio Mendez Magaña no. <br />
+                2838 Col. Tamulte de las Barrancas,<br />C.P 86150 Villahermosa,
+                Tabasco
+              </p>
+            </div>
+          </div>
+
+          <div class="enlaces d-flex">
+            <img src="./img/enlace_icon.svg" alt="Enlaces" />
+            <div>
+              <h4 class="fs-5">ENLACES EXTERNOS</h4>
+              <ul class="p-0 ms-3">
+                <li>
+                  <a href="#" class="link-light decoration-none"
+                    >SECRETARIA DE SALUD</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="link-light decoration-none"
+                    >HOSPITAL JUAN GRAHAM</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="link-light decoration-none"
+                    >HOSPITAL ROVIROSA</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="link-light decoration-none"
+                    >HOSPITAL DEL NIÑO</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <a href="#" class="text-center link-light decoration-none fw-bold"
+            >MAPA DEL HOSPITAL <i class="fas fa-chevron-right ms-2"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- font awesomes script -->
+    <script
+      src="https://kit.fontawesome.com/ba7f1861b9.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Scripts -->
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

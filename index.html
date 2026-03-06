@@ -20,17 +20,22 @@
     <title>Hospital Regional de Alta Especialidad de la Mujer</title>
   </head>
   <body>
-    <div id="search_window" class="bg-menu position-fixed z-index--4  vh-100 vw-100 d-flex d-flex justify-content-center align-items-center">
+
+    <div id="search_window" class="bg-yellow position-fixed z-index--4  vh-100 vw-100 d-flex d-flex justify-content-center align-items-center">
       <a href="javascript:void(0)" class="text-white position-absolute close-search" id="close-search"><i class="bi bi-x-lg"></i></a>
       <div class="position-relative">
           <form action="#">
             <div class="input-data">
-                <input class="btn-search text-white fw-bolder fs-4 px-3 py-2" type="text" placeholder="Escribir Aquí" name="search">
+                <input class="btn-search text-white fw-bolder fs-4 px-3 py-2" id="search_button" type="text" placeholder="Escribir Aquí" name="search">
                 <button type="submit"><i class="bi bi-search text-white h4 fw-bolder "></i></button>
             </div>
           </form>
       </div>
   </div> 
+
+  
+  
+ 
 
     <div
       class="
@@ -48,7 +53,7 @@
       >
         <i class="fa fa-phone" aria-hidden="true"></i> (993) 310 90 00</a
       >
-      <img src="img/fondo_red.png" class="img-fluid" />
+      <img src=<?=get_template_directory_uri()?> "img/fondo_red.png" class="img-fluid" />
     </div>
     <!-- Header inicio -->
     <header

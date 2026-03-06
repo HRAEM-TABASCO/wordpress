@@ -3,9 +3,11 @@ var carousel = new bootstrap.Carousel(myCarousel);
 
 /* Funciones para cerrar el search windows */
 
+let search_button = document.querySelector("#search_button");
 
 let removingSearch = function(){
     document.querySelector("#search_window").classList.remove("on");
+    search_button.value = '';
 }
 let addingSearch = function(){
     document.querySelector("#search_window").classList.add("on");
@@ -21,6 +23,10 @@ document.querySelector("#btn-search").addEventListener('click', function(e){
 
 document.querySelector("#close-search").addEventListener('click', function(e){
     removingSearch();
+});
+
+jQuery(document).ready(function(){
+    jQuery('.vp-on-pageload-wrap').load("https://hmujertab.gob.mx/?p=77&vp_on_pageload=t");
 });
 
 

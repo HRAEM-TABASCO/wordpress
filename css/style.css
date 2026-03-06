@@ -12041,6 +12041,32 @@ fieldset:disabled .btn {
   background-color: white;
 }
 
+.bg-yellow {
+  background: #c18f5a;
+}
+
+#chat_bot {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 5%;
+  right: 5%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: #c518d4;
+  z-index: 10000;
+  -webkit-box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
 .btn-search {
   background: none;
   border: none;
@@ -12067,20 +12093,20 @@ fieldset:disabled .btn {
   border-bottom: 2px solid #fff;
 }
 
-.input-data::-webkit-input-placeholder {
-  color: #fff !important;
+.input-data #search_button::-webkit-input-placeholder {
+  color: #fff;
 }
 
-.input-data:-ms-input-placeholder {
-  color: #fff !important;
+.input-data #search_button:-ms-input-placeholder {
+  color: #fff;
 }
 
-.input-data::-ms-input-placeholder {
-  color: #fff !important;
+.input-data #search_button::-ms-input-placeholder {
+  color: #fff;
 }
 
-.input-data::placeholder {
-  color: #fff !important;
+.input-data #search_button::placeholder {
+  color: #fff;
 }
 
 .input-data:focus {

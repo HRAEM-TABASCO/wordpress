@@ -2,6 +2,31 @@ $color-yellow: rgb(193, 143, 90);
 $color-main: #860629;
 $color-sec: #a20d37;
 
+
+.bg-yellow{
+  background: rgb(193, 143, 90);
+}
+#chat_bot {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom:5%;
+  right:5%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+
+  background: rgb(197, 24, 212);
+  z-index: 10000;
+  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.2);
+ 
+}
+
+
+
+
+
 .btn-search {
   background: none;
   border: none;
@@ -23,10 +48,13 @@ $color-sec: #a20d37;
     opacity: 1;
 }
 
+
 .input-data {
+  #search_button{
     &::placeholder{
-        color: #fff !important;
+      color: #fff;
     }
+  }
   border-bottom: 2px solid #fff;
   &:focus {
     outline: 0;
