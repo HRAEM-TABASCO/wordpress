@@ -1,2 +1,2 @@
 <?php
-echo do_shortcode(["test_page"]);
+echo do_shortcode('[test_page]');
