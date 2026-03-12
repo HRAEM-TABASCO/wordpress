@@ -1,0 +1,121 @@
+name: Check Template Structure
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  check-templates:
+    name: Check WordPress Template Structure
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+
+      - name: Check PHP syntax of all template files
+        run: |
+          echo "Checking PHP syntax..."
+          errors=0
+          for file in $(find . -name "*.php" -not -path "./node_modules/*"); do
+            result=$(php -l "$file" 2>&1)
+            if echo "$result" | grep -q "Parse error"; then
+              echo "SYNTAX ERROR: $file"
+              echo "$result"
+              errors=$((errors + 1))
+            else
+              echo "OK: $file"
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "Found $errors PHP syntax error(s)."
+            exit 1
+          fi
+          echo "All PHP files passed syntax check."
+
+      - name: Check required WordPress theme files exist
+        run: |
+          echo "Checking required WordPress theme files..."
+          errors=0
+          required_files=(
+            "style.css"
+            "index.php"
+            "functions.php"
+            "header.php"
+            "footer.php"
+          )
+          for file in "${required_files[@]}"; do
+            if [ -f "$file" ]; then
+              echo "OK: $file exists"
+            else
+              echo "MISSING: $file"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "Found $errors missing required theme file(s)."
+            exit 1
+          fi
+          echo "All required WordPress theme files are present."
+
+      - name: Check style.css has required theme header fields
+        run: |
+          echo "Checking style.css theme header..."
+          errors=0
+          required_fields=("Theme Name" "Version" "Description")
+          for field in "${required_fields[@]}"; do
+            if grep -q "$field" style.css; then
+              echo "OK: '$field' found in style.css"
+            else
+              echo "MISSING: '$field' not found in style.css header"
+              errors=$((errors + 1))
+            fi
+          done
+          if [ $errors -gt 0 ]; then
+            echo "style.css is missing $errors required header field(s)."
+            exit 1
+          fi
+          echo "style.css theme header looks good."
+
+      - name: Check template files use get_header and get_footer
+        run: |
+          echo "Checking template files use get_header() and get_footer()..."
+          template_files=(
+            "404.php"
+            "front-page.php"
+            "single.php"
+            "search.php"
+          )
+          for file in "${template_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "SKIP: $file does not exist"
+              continue
+            fi
+            size=$(wc -c < "$file")
+            if [ "$size" -eq 0 ]; then
+              echo "SKIP: $file is empty"
+              continue
+            fi
+            has_header=$(grep -c "get_header" "$file" || true)
+            has_footer=$(grep -c "get_footer" "$file" || true)
+            if [ "$has_header" -gt 0 ] && [ "$has_footer" -gt 0 ]; then
+              echo "OK: $file has get_header() and get_footer()"
+            else
+              if [ "$has_header" -eq 0 ]; then
+                echo "WARNING: $file is missing get_header()"
+              fi
+              if [ "$has_footer" -eq 0 ]; then
+                echo "WARNING: $file is missing get_footer()"
+              fi
+            fi
+          done
+          echo "Template structure check complete."

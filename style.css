@@ -1,3 +1,14 @@
+/*
+Theme Name: HRAEM Tabasco
+Theme URI: https://hmujertab.gob.mx/
+Description: WordPress theme for the Hospital Regional de Alta Especialidad de la Mujer de Tabasco.
+Author: HRAEM Tabasco
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: hmujertab
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
 body {
